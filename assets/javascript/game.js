@@ -31,6 +31,8 @@ $(document).ready(function(){
     var wins = 0;
     var losses = 0;
 
+    var userGuessLog = [];
+
     //functions
     function pickRandomNumber(arr) {
 
@@ -76,6 +78,9 @@ $(document).ready(function(){
 		totalScore = 0;
         $("#totalNumber").html(totalScore);
 
+        userGuessLog = 0;
+        $("#guessLog").html(userGuessLog);
+
 		alert(x);
 	}
 
@@ -88,27 +93,38 @@ $(document).ready(function(){
 
         totalScore += crystalNumber1;
         $("#totalNumber").html(totalScore);
+
+        userGuessLog += crystalNumber1;
+        $("#guessLog").html(userGuessLog);
+        
     });
 
     $("#button-2").on("click", function() {
 
         totalScore += crystalNumber2;
         $("#totalNumber").html(totalScore);
+
+        userGuessLog += crystalNumber2;
+        $("#guessLog").html(userGuessLog);
     });
 
     $("#button-3").on("click", function() {
 
         totalScore += crystalNumber3;
         $("#totalNumber").html(totalScore);
+
+        userGuessLog += crystalNumber3;
+        $("#guessLog").html(userGuessLog);
     });
 
     $("#button-4").on("click", function() {
 
         totalScore += crystalNumber4;
         $("#totalNumber").html(totalScore);
+
+        userGuessLog += crystalNumber4;
+        $("#guessLog").html(userGuessLog);
     });
-
-
 
     $("button").on("click", function() {
 		if (totalScore == randNumber) {
