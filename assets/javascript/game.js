@@ -10,16 +10,17 @@ $(document).ready(function(){
 
     //crystalNumber array
 
-    var crystalNumber = [];
+    var crystals = [];
 
     for (var c= 1; c < 12; c++){
-        crystalNumber.push (c);
+        crystals.push (c);
         //console.log(crystalNumber);
     }
 
     //variables
     var computerNumber;
     var crystalNumbers = [];
+
     var crystalNumber1;
     var crystalNumber2;
     var crystalNumber3;
@@ -49,8 +50,88 @@ $(document).ready(function(){
 		}
 
 		console.log("crystal numbers: " + crystalNumbers);
+    } 
+    
+    function crystalValues(arr) {
 
-	} 
+		for (i = 0; i < arr.length; i++) {
+
+		$("#button-" + (i+1)).attr("value", arr[i]);
+		console.log(this);
+		}
+		crystalNumber1 = arr[0];
+		crystalNumber2 = arr[1];
+		crystalNumber3 = arr[2];
+		crystalNumber4 = arr[3];
+    }
+    
+    function gameReset(x) {
+
+		crystalNumbers = []; 
+
+		pickRandomNumber(computerNumber);
+
+		pickRandomCrystals(crystals);
+
+		crystalValues(crystalNumbers);
+
+		totalScore = 0;
+		$("#totalNumber").html(totalScore);
+
+		alert(x);
+	}
+
+    pickRandomNumber(randomNumber);
+	pickRandomCrystals(crystals); 
+    crystalValues(crystalNumbers);
+    
+    $("#button-1").on("click", function() {
+
+        totalScore += crystalNumber1;
+        $("#totalNumber").html(totalScore);
+    });
+
+    $("#button-2").on("click", function() {
+
+        totalScore += crystalNumber2;
+        $("#totalNumber").html(totalScore);
+    });
+
+    $("#button-3").on("click", function() {
+
+        totalScore += crystalNumber3;
+        $("#totalNumber").html(totalScore);
+    });
+
+    $("#button-4").on("click", function() {
+
+        totalScore += crystalNumber4;
+        $("#totalNumber").html(totalScore);
+    });
+
+
+
+    $("button").on("click", function() {
+		if (totalScore == computerNumber) {
+
+			wins++;
+			console.log(totalScore);
+			$("#totalNumber").html(totalScore);
+			$("#wins").html("Wins: " + wins);
+
+
+			setTimeout(function() {gameReset("YOU WIN!!")}, 200);
+		}
+
+		else if (totalScore > computerNumber){
+
+			losses++;
+			$("#totalNumber").html(totalScore);
+			$("#losses").html("Losses: " + losses);
+
+			setTimeout(function() {gameReset("YOU LOSE!")}, 200);
+		}
+	});
 
 
 
