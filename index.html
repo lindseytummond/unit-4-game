@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Crystal Collector Game</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.4.1.min.js">
+    <link rel="stylesheet" href="assets/css/style.css">  
+</head>
+
+<body>
+    <script src="assets/javascript/game.js"></script>
+    
+    <div>
+        <h2>Crystal Collector</h2>
+    </div>
+
+    <div>
+        <h4>Game Rules:</h4>
+        <p>You will be given a random number at the start of every game.</p>
+        <p>Each of the crystals below is assigned a random number.</p>
+        <p>Click a combination of crystals to equal the random number.</p>
+        <h4>Game Ends When:</h4>
+        <p>You win by matching your total score to the random number.</p>
+        <p>You lose if you go over the random number.</p>
+        <button id="newGameButton" onclick="newGame()">NEW GAME</button>
+     </div>
+
+     <div>
+        <h4>Match the Number:</h4>
+        <p id= "randomNumber"> </p>
+     </div>
+
+     <div>
+        <p>Total Wins: </p>
+        <p id = "winLog"> </p> 
+        <p>Total Losses: </p>
+        <p id = "loseLog"> </p> 
+    </div>
+
+    <div>   
+        <button id="button1">
+            <img src="assets/images/red-crystal.jpg" alt="red-crystal">
+        </button>
+        <button id="button2">
+            <img src="assets/images/blue-crystal.jpg" alt="blue-crystal">
+        </button>
+        <button id="button3">
+            <img src="assets/images/yellow-crystal.png" alt="yellow-crystal">
+        </button>
+        <button id="button4">
+            <img src="assets/images/green-crystal.jpg" alt="green-crystal">
+        </button>
+    </div>
+
+    <div>
+        <h4>Your Score:</h4>
+        <p id="yourScore"></p>
+    </div>
+
+    
+</body>
+</html>
