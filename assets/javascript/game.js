@@ -1,12 +1,13 @@
 $(document).ready(function(){
 
     //randomNumber array
-    var randomNumber = [];
 
-    for (var r= 19; r < 121; r++){
-        randomNumber.push (r);
+    var rand = [];
+
+	for (var r = 19; r < 121; r++) {
+        rand.push(r);
         //console.log(randomNumber);
-    }
+	}
 
     //crystalNumber array
 
@@ -18,7 +19,7 @@ $(document).ready(function(){
     }
 
     //variables
-    var computerNumber;
+    var randNumber;
     var crystalNumbers = [];
 
     var crystalNumber1;
@@ -34,23 +35,20 @@ $(document).ready(function(){
     function pickRandomNumber(arr) {
 
 		var x = arr[Math.floor(Math.random() * arr.length)];
-		computerNumber = x;
-		$("#randomrNumber").html(computerNumber);
+        randNumber = x;
+		$("#randomNumber").html(randNumber);
 
-		console.log("random number: " + computerNumber);
+		console.log("random number: " + randNumber);
     }
     
     function pickRandomCrystals(arr) {
 
 		for (var y = 0; y < 4; y++){
-
-			var a = arr[Math.floor(Math.random() * arr.length)];
-
-			crystalNumbers.push(a);
+            var a = arr[Math.floor(Math.random() * arr.length)];
+            crystalNumbers.push(a);
 		}
-
 		console.log("crystal numbers: " + crystalNumbers);
-    } 
+	}
     
     function crystalValues(arr) {
 
@@ -69,7 +67,7 @@ $(document).ready(function(){
 
 		crystalNumbers = []; 
 
-		pickRandomNumber(randomNumber);
+		pickRandomNumber(rand);
 
 		pickRandomCrystals(crystals);
 
@@ -77,14 +75,12 @@ $(document).ready(function(){
 
 		totalScore = 0;
         $("#totalNumber").html(totalScore);
-        
-        randomNumber = 0;
-		$("#randomNumber").html(computerNumber);
 
 		alert(x);
 	}
 
-    pickRandomNumber(randomNumber);
+    //Start of Game Settings
+    pickRandomNumber(rand);
 	pickRandomCrystals(crystals); 
     crystalValues(crystalNumbers);
     
@@ -115,7 +111,7 @@ $(document).ready(function(){
 
 
     $("button").on("click", function() {
-		if (totalScore == computerNumber) {
+		if (totalScore == randNumber) {
 
 			wins++;
 			console.log(totalScore);
@@ -126,7 +122,7 @@ $(document).ready(function(){
 			setTimeout(function() {gameReset("YOU WIN!!")}, 200);
 		}
 
-		else if (totalScore > computerNumber){
+		else if (totalScore > randNumber){
 
 			losses++;
 			$("#totalNumber").html(totalScore);
