@@ -35,7 +35,7 @@ $(document).ready(function(){
 
 		var x = arr[Math.floor(Math.random() * arr.length)];
 		computerNumber = x;
-		$("#computerNumber").html(computerNumber);
+		$("#randomrNumber").html(computerNumber);
 
 		console.log("random number: " + computerNumber);
     }
@@ -69,14 +69,17 @@ $(document).ready(function(){
 
 		crystalNumbers = []; 
 
-		pickRandomNumber(computerNumber);
+		pickRandomNumber(randomNumber);
 
 		pickRandomCrystals(crystals);
 
 		crystalValues(crystalNumbers);
 
 		totalScore = 0;
-		$("#totalNumber").html(totalScore);
+        $("#totalNumber").html(totalScore);
+        
+        randomNumber = 0;
+		$("#randomNumber").html(computerNumber);
 
 		alert(x);
 	}
