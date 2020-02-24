@@ -79,7 +79,8 @@ $(document).ready(function(){
         $("#totalNumber").html(totalScore);
 
         userGuessLog = 0;
-        $("#guessLog").html(userGuessLog);
+        //$("#guessLog").html(userGuessLog);
+        $("#guessLog").empty();
 
 		alert(x);
 	}
@@ -95,9 +96,13 @@ $(document).ready(function(){
         $("#totalNumber").html(totalScore);
 
         userGuessLog += crystalNumber1;
-        $("#guessLog").html(userGuessLog);
         
-    });
+        
+        var imageTag = document.createElement ("img");
+        imageTag.setAttribute("src","assets/images/red-crystal.jpg");
+        imageTag.setAttribute("class","smallImages");
+        $("#guessLog").append(imageTag);
+    })
 
     $("#button-2").on("click", function() {
 
@@ -105,8 +110,11 @@ $(document).ready(function(){
         $("#totalNumber").html(totalScore);
 
         userGuessLog += crystalNumber2;
-        $("#guessLog").html(userGuessLog);
-    });
+        var imageTag = document.createElement ("img");
+        imageTag.setAttribute("src","assets/images/blue-crystal.jpg");
+        imageTag.setAttribute("class","smallImages");
+        $("#guessLog").append(imageTag);
+    })
 
     $("#button-3").on("click", function() {
 
@@ -114,7 +122,10 @@ $(document).ready(function(){
         $("#totalNumber").html(totalScore);
 
         userGuessLog += crystalNumber3;
-        $("#guessLog").html(userGuessLog);
+        var imageTag = document.createElement ("img");
+        imageTag.setAttribute("src","assets/images/yellow-crystal.png");
+        imageTag.setAttribute("class","smallImages");
+        $("#guessLog").append(imageTag);
     });
 
     $("#button-4").on("click", function() {
@@ -123,7 +134,10 @@ $(document).ready(function(){
         $("#totalNumber").html(totalScore);
 
         userGuessLog += crystalNumber4;
-        $("#guessLog").html(userGuessLog);
+        var imageTag = document.createElement ("img");
+        imageTag.setAttribute("src","assets/images/green-crystal.jpg");
+        imageTag.setAttribute("class","smallImages");
+        $("#guessLog").append(imageTag);
     });
 
     $("button").on("click", function() {
