@@ -1,0 +1,26 @@
+body {
+	background-image: url(assets/images/crystalBackground.jpg);
+}
+
+.jumbotron {
+    background-color: green;
+    margin: 50px;
+    border-radius: 10px;
+ 
+}
+
+#numberSection, #scoreSection {
+	background-color: yellowgreen;
+	margin: 50px;
+    border-radius: 10px;
+
+
+}
+
+#buttonSection {
+    background-color: blue;
+    margin: 50px;
+    border-radius: 10px;
+    padding: 30px;
+   
+}
