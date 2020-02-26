@@ -1,6 +1,6 @@
 # unit-4-game: Crystal Collector
 
-## Overview:
+### Overview:
 
 A fun and interactive game for web browsers built using HTML5, CSS, Bootstrap, JavaScript and jQuery.
 
