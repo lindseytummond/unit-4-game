@@ -8,7 +8,6 @@ $(document).ready(function(){
         rand.push(r);
         //console.log(randomNumber);
 	}
-
     //crystalNumber array
 
     var crystals = [];
