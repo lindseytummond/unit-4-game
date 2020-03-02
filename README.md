@@ -12,7 +12,7 @@ You will be given a random number at the start of the game. Use the crystals to 
 
 Match your points to the random number to win. If you go over, you lose!
 
-<a href="https://lindseytummond.github.io/unit-4-game/">
+<a href="https://lindseytummond.github.io/unit-4-game/" target="_blank">
   <img src="assets/images/crystal-collector.jpg">
 </a>
 
